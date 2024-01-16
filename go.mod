@@ -1,3 +1,3 @@
-module github.com/osmono-net/shared
+module github.com/Osmono-net/shared
 
 go 1.19
