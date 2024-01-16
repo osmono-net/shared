@@ -1,5 +1,7 @@
 package shared
 
+import "fmt"
+
 type EventLogMsg struct {
 	Source    string `json:"source"`
 	EventType string `json:"eventType"`
@@ -7,4 +9,8 @@ type EventLogMsg struct {
 	Message   string `json:"message"`
 	Time      string `json:"time"`
 	UID       int    `json:"uid"`
+}
+
+func PrintEvent() {
+	fmt.Printf("bob")
 }
