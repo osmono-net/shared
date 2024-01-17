@@ -16,8 +16,8 @@ type Config struct {
 	EnableSsh     bool
 }
 
-func New() Config {
+func NewConfig() Config {
 	return Config{
-		Id: uuid.New(),
+		Id: uuid.New().String(),
 	}
 }
