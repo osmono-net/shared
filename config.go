@@ -18,6 +18,7 @@ type Config struct {
 
 func NewConfig() Config {
 	return Config{
-		Id: uuid.New().String(),
+		Id:                uuid.New().String(),
+		HeartbeatInterval: 10,
 	}
 }
