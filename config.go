@@ -1,10 +1,8 @@
 package shared
 
-import "github.com/google/uuid"
-
 type Config struct {
-	Id        string
 	PatchMgmt bool
+
 	// Time interval between heartbeat requests
 	// back to the C2 server, in seconds.
 	HeartbeatInterval uint
@@ -18,7 +16,12 @@ type Config struct {
 
 func NewConfig() Config {
 	return Config{
-		Id:                uuid.New().String(),
 		HeartbeatInterval: 10,
+		PatchMgmt:         true,
+		EnableSsh:         true,
+		EnableRdp:         true,
+		EnablePing:        true,
+		EnableEvents:      true,
+		EnableLogging:     true,
 	}
 }
