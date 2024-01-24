@@ -7,3 +7,8 @@ const (
 	URL
 	LocalDiskPath
 )
+
+type PlaybookCommand struct {
+	Type       PlaybookCommandType
+	ScriptData string
+}
