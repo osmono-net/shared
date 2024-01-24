@@ -6,6 +6,13 @@ import (
 	"github.com/nats-io/nats.go"
 )
 
+const (
+	CHANNEL_HEARTBEAT        = "nammu-heartbeat"
+	CHANNEL_EVENTLOG         = "nammu-eventlog"
+	CHANNEL_PLAYBOOK_COMMAND = "nammu-playbook-command"
+	CHANNEL_PLAYBOOK_RESULT  = "nammu-playbook-result"
+)
+
 type AgentMessage[T any] struct {
 	Id      string
 	Payload T
