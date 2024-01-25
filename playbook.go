@@ -8,6 +8,19 @@ const (
 	LocalDiskPath
 )
 
+func (cType PlaybookCommandType) String() string {
+	switch cType {
+	case ScriptLiteral:
+		return "Script Literal"
+	case URL:
+		return "URL"
+	case LocalDiskPath:
+		return "Local Disk Path"
+	default:
+		return "Unknown"
+	}
+}
+
 type PlaybookCommand struct {
 	Type       PlaybookCommandType
 	ScriptData string
