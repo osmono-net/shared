@@ -11,6 +11,7 @@ const (
 	CHANNEL_EVENTLOG         = "nammu-eventlog"
 	CHANNEL_PLAYBOOK_COMMAND = "nammu-playbook-command"
 	CHANNEL_PLAYBOOK_RESULT  = "nammu-playbook-result"
+	CHANNEL_SHELL_COMMAND    = "nammu-shell-command"
 )
 
 type AgentMessage[T any] struct {
@@ -36,3 +37,5 @@ func Send(url, channel string, T any) error {
 
 	return nil
 }
+
+// TODO add request and reply methods here

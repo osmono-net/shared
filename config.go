@@ -16,7 +16,7 @@ type Config struct {
 
 func NewConfig() Config {
 	return Config{
-		HeartbeatInterval: 10,
+		HeartbeatInterval: 60,
 		PatchMgmt:         true,
 		EnableSsh:         true,
 		EnableRdp:         true,
